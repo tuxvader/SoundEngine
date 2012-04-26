@@ -16,19 +16,8 @@ package net.icecubegames.sound
 		
 		private var _queuedSound:Vector.<GameSound>;
 		
-		private static var instance:SoundEngine;
 		
-		/**
-		 * Obtains the only instance of SoundEngine
-		 * @return SoundEngine
-		 */
-		public static function get Instance():SoundEngine
-		{
-			if (instance == null) { instance = new SoundEngine(new SingletonKey()); }
-			return instance;
-		}
-		
-		public function SoundEngine(pKey:SingletonKey) 
+		public function SoundEngine() 
 		{
 			_sounds = new Array();
 			_queuedSound = new Vector.<GameSound>();
@@ -244,9 +233,4 @@ package net.icecubegames.sound
 		}
 	}
 
-}
-
-class SingletonKey
-{
-	
 }
